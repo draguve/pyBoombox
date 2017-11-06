@@ -1,0 +1,33 @@
+i.material-icons {
+    margin-top: 10px;
+}
+.music-card-wide.mdl-card {
+  width: 512px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.music-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('welcome_card.jpg') center / cover;
+}
+.music-card-wide > .mdl-card__menu {
+  color: #ffffff;
+}
+
+.demo-list-action {
+  width: 100%;
+}
+.song-list{
+    width: 512px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.mdl-layout__content{
+    flex:1 0 auto;
+}
+.mdl-mini-footer{
+    flex: 0 0 auto;
+}
