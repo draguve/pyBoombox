@@ -6,6 +6,7 @@ i.material-icons {
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  min-height: 150px;
 }
 .music-card-wide > .mdl-card__title {
   color: #fff;
@@ -24,10 +25,13 @@ i.material-icons {
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    display: none;/*Default Closed*/
 }
 .mdl-layout__content{
     flex:1 0 auto;
 }
 .mdl-mini-footer{
     flex: 0 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
