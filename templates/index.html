@@ -4,7 +4,7 @@
 <head>
     <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-light_green.min.css" />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js">
     </script>
     <link href="static/css/index.css" rel="stylesheet">
@@ -15,7 +15,7 @@
             var max = 5;
             var temp = {message:""};
             $('.mdl-layout').scroll(function(){
-                console.log("test");
+
                 $('#list-selected').toggleClass('scrolling mdl-shadow--2dp', $(window).scrollTop() > $('.mdl-layout__header').offset().top);
             });
             $('.music-card-wide').click(function() {
@@ -96,9 +96,6 @@
                 <div id="insideselected">
                     <img src="/static/acdc.jpg" class="mdl-list__item-avatar" /><span class="mdl-badge" data-badge="X"></span>
                 </div>
-                <div id="insideselected">
-                    <img src="/static/acdc.jpg" class="mdl-list__item-avatar" /><span class="mdl-badge" data-badge="X"></span>
-                </div>
                 <div id="insideselected"></div>
             </div>
         </header>
@@ -118,6 +115,7 @@
                         </div>
                     </div>
                     <div class="mdl-cell--4-col song-list mdl-shadow--2dp">
+
                         <ul class="demo-list-two mdl-list">
                             <li class="mdl-list__item mdl-list__item--two-line">
                                 <span class="mdl-list__item-primary-content">
@@ -141,6 +139,9 @@
             <div class="mdl-snackbar__text"></div>
             <button type="button" class="mdl-snackbar__action"></button>
         </div>
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" style="position:fixed;bottom:2%;right:3%;z-index:10;">
+  <i class="material-icons" style="margin-top:0">add</i>
+</button>
         <footer class="mdl-mini-footer">
             <div class="mdl-mini-footer__left-section">
                 <ul class="mdl-mini-footer__link-list">
