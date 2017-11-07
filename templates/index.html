@@ -15,9 +15,7 @@
                 var slides = document.getElementsByClassName("song-list");
                 var next = $(this).next();
                 for (var i = 0; i < slides.length; i++) {
-                    if(next.css('display') == 'block' && $(slides[i]).css('display') == 'block'){
-                        console.log("x");
-                    }else{
+                    if(!(next.css('display') == 'block' && $(slides[i]).css('display') == 'block')){
                         $(slides[i]).slideUp();
                     }
                 }
