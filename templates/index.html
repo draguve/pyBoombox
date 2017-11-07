@@ -9,9 +9,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script type="text/javascript">
+        last = "";
         $(document).ready(function() {
             $('.music-card-wide').click(function() {
-                $(this).next().slideToggle();
+                var slides = document.getElementsByClassName("song-list");
+                var next = $(this).next();
+                for (var i = 0; i < slides.length; i++) {
+                    if(next.css('display') == 'block' && $(slides[i]).css('display') == 'block'){
+                        console.log("x");
+                    }else{
+                        $(slides[i]).slideUp();
+                    }
+                }
+                next.slideDown();
             });
         });
     </script>
