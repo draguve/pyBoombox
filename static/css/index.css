@@ -35,3 +35,28 @@ i.material-icons {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+#list-selected{
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    height: 80px;
+    background-color: #3F51B5;
+}
+#insideselected{
+    display: block;
+    flex: 0 1 auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.mdl-badge{
+    margin-left: -10px;
+    margin-right: 0;
+}
+.scrolling {
+    position: fixed;
+    top: 0;
+}

@@ -14,6 +14,10 @@
         $(document).ready(function() {
             var max = 5;
             var temp = {message:""};
+            $('.mdl-layout').scroll(function(){
+                console.log("test");
+                $('#list-selected').toggleClass('scrolling mdl-shadow--2dp', $(window).scrollTop() > $('.mdl-layout__header').offset().top);
+            });
             $('.music-card-wide').click(function() {
                 var slides = document.getElementsByClassName("song-list");
                 var next = $(this).next();
@@ -30,6 +34,11 @@
                     $(".mdl-checkbox__input:checked").removeAttr('disabled');
                 } else {
                     $(".mdl-checkbox__input").removeAttr('disabled');
+                }
+                if ($(".mdl-checkbox__input:checked").length == 0) {
+                    $("#list-selected").slideUp();
+                }else{
+                    $('#list-selected').slideDown();
                 }
             });
 
@@ -72,6 +81,25 @@
                 <nav class="mdl-navigation mdl-layout--large-screen-only">
                     <a class="mdl-navigation__link" href="">Vote</a> <a class="mdl-navigation__link" href="">Request</a> <a class="mdl-navigation__link" href="">About</a>
                 </nav>
+            </div>
+            <div id="list-selected" style="display: none">
+                <div id="insideselected"></div>
+                <div id="insideselected">
+                    <img src="/static/acdc.jpg" class="mdl-list__item-avatar" /><span class="mdl-badge" data-badge="X"></span>
+                </div>
+                <div id="insideselected">
+                    <img src="/static/acdc.jpg" class="mdl-list__item-avatar" /><span class="mdl-badge" data-badge="X"></span>
+                </div>
+                <div id="insideselected">
+                    <img src="/static/acdc.jpg" class="mdl-list__item-avatar" /><span class="mdl-badge" data-badge="X"></span>
+                </div>
+                <div id="insideselected">
+                    <img src="/static/acdc.jpg" class="mdl-list__item-avatar" /><span class="mdl-badge" data-badge="X"></span>
+                </div>
+                <div id="insideselected">
+                    <img src="/static/acdc.jpg" class="mdl-list__item-avatar" /><span class="mdl-badge" data-badge="X"></span>
+                </div>
+                <div id="insideselected"></div>
             </div>
         </header>
         <div class="mdl-layout__drawer mdl-layout--small-screen-only">
