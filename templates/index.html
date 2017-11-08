@@ -13,6 +13,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             var max = 5;
+            var temp = {message:""};
             $('.music-card-wide').click(function() {
                 var slides = document.getElementsByClassName("song-list");
                 var next = $(this).next();
@@ -23,7 +24,6 @@
                 }
                 next.slideDown();
             });
-
             $(".mdl-checkbox__input").change(function() {
                 if ($(".mdl-checkbox__input:checked").length == max) {
                     $(".mdl-checkbox__input").attr('disabled', 'disabled');
@@ -43,6 +43,19 @@
                 }
             });
         });
+        setTimeout(function() {
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    var snackbarContainer = document.querySelector('.mdl-js-snackbar');
+                    {% for message in messages %}
+                    temp = {
+                    message:"{{message}}"
+                    };
+                    snackbarContainer.MaterialSnackbar.showSnackbar(temp);
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        }, 1000);
     </script>
     <title>Restaurant</title>
 </head>
